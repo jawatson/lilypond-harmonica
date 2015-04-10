@@ -30,7 +30,7 @@ slap =
 
 #(define* (draw hole #:optional (bends 0))
   (case bends
-    ((0) (markup hole))
+    ((0) (if (equal? hole "2")(markup "2/3+")(markup hole)))
     ((1) (markup (#:concat (hole "'"))))
     ((2) (markup (#:concat (hole "''"))))
     ((3) (markup (#:concat (hole "'''"))))
