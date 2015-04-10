@@ -14,6 +14,11 @@ shake = #(define-event-function (parser location) ()
   #{ :32 #}
 )
 
+quartertone =
+#(let ((m (make-articulation "stopped")))
+   (set! (ly:music-property m 'tweaks)
+      (acons 'font-size 2 (ly:music-property m 'tweaks)))
+   m)
 slap =
 #(let ((m (make-articulation "flageolet")))
    (set! (ly:music-property m 'tweaks)
