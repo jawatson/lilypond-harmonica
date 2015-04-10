@@ -16,6 +16,12 @@ slap =
       (acons 'font-size -3 (ly:music-property m 'tweaks)))
    m)
 
+dip =
+#(let ((m (make-articulation "upbow")))
+   (set! (ly:music-property m 'tweaks)
+      (acons 'font-size -3 (ly:music-property m 'tweaks)))
+   m)
+
 #(define (NoteEvent? music)
    (equal? (ly:music-property music 'name) 'NoteEvent))
 
@@ -30,6 +36,7 @@ slap =
 
 #(define* (draw hole #:optional (bends 0))
   (case bends
+    ;;; ((0) (markup hole))
     ((0) (if (equal? hole "2")(markup "2/3+")(markup hole)))
     ((1) (markup (#:concat (hole "'"))))
     ((2) (markup (#:concat (hole "''"))))
