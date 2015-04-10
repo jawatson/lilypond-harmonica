@@ -29,6 +29,6 @@
 }
 
 \harmonicaTab \relative c' {
-  \override TextScript.extra-offset = #'(0 . -11) 
-  d,4 e4\slap g4 <b c>8 c8 \tuplet 3/2 {b8 g e}
+  \override TextScript.padding = #2 
+  d4 e4\slap g4 <b c>8 c8 \tuplet 3/2 {b8 g e}
 }
