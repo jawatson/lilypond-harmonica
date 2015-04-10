@@ -10,6 +10,10 @@ http://osdir.com/ml/lilypond-user-gnu/2010-04/msg00250.html
 
 \version "2.18.0"
 
+flutter = #(define-event-function (parser location) ()
+  #{ :32 #}
+)
+
 shake = #(define-event-function (parser location) ()
   #{ :32 #}
 )
