@@ -18,6 +18,11 @@ shake = #(define-event-function (parser location) ()
   #{ :32 #}
 )
 
+
+pull = {
+   \once \override Staff.NoteHead.style = #'slash
+  }
+
 quartertone =
 #(let ((m (make-articulation "stopped")))
    (set! (ly:music-property m 'tweaks)
@@ -122,7 +127,7 @@ dip =
    (cond ((music-is-of-type? m 'event-chord)
        (set! (ly:music-property m 'elements)
              (append (ly:music-property m 'elements)
-                     (make-tab-numbers m))))
+                     (reverse (make-tab-numbers m)))))
          ((music-is-of-type? m 'note-event)
        (set! (ly:music-property m 'articulations)
              (append (ly:music-property m 'articulations)
