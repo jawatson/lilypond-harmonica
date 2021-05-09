@@ -1,14 +1,13 @@
-
-\version "2.18.0"
-
-\include "harmonica.ly"
-
+\version "2.22.1"
 
 \layout {
-   #(layout-set-staff-size 16)
+   #(layout-set-staff-size 20)
 
    \context { \Score
-      \override MetronomeMark #'padding = #'5
+      \override MetronomeMark #'padding = #5
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/128)
+      \override TextScript.font-size = #-2
+        \override TextScript.padding = #5
    }
    \context { \Staff
       \override TimeSignature #'style = #'numbered
@@ -28,7 +27,6 @@
    }
 }
 
-\harmonicaTab \relative c' {
-  \override TextScript.padding = #2 
-  d4 e4\slap g4 <b c>8 c8 \tuplet 3/2 {b8 g e}
+\paper {
+  system-system-spacing.minimum-distance = #20
 }
