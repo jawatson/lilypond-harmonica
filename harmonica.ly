@@ -7,7 +7,7 @@ the following thread;
 http://osdir.com/ml/lilypond-user-gnu/2010-04/msg00250.html
 %}
 
-\version "2.22.1"
+\version "2.22.0"
 
 flutter = #(define-event-function (parser location) ()
   #{ :32 #}

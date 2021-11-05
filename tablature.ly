@@ -1,5 +1,5 @@
 
-\version "2.22.1"
+\version "2.22.0"
 
 \include "harmonica.ly"
 \include "style.ly"
