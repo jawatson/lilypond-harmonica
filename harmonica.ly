@@ -71,8 +71,8 @@ dip =
 
 #(define (get-diatonic-b-ritcher-tab NoteEvent)
    (case (ly:pitch-semitones (ly:music-property NoteEvent 'pitch))
-    ((-1) (draw "1" 1))
-    ((0) (draw "1"))
+    ((-1) (blow "1"))
+    ((0) (draw "1" 1))
     ((1) (draw "1"))
     ((2) (overblow "1"))
     ((3) (blow "2"))
