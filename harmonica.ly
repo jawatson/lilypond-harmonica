@@ -7,7 +7,7 @@ the following thread;
 http://osdir.com/ml/lilypond-user-gnu/2010-04/msg00250.html
 %}
 
-\version "2.22.0"
+\version "2.24.0"
 
 flutter = #(define-event-function (parser location) ()
   #{ :32 #}
@@ -23,18 +23,18 @@ pull = {
   }
 
 quartertone =
-#(let ((m (make-articulation "stopped")))
+#(let ((m (make-articulation 'stopped)))
    (set! (ly:music-property m 'tweaks)
       (acons 'font-size 2 (ly:music-property m 'tweaks)))
    m)
 slap =
-#(let ((m (make-articulation "flageolet")))
+#(let ((m (make-articulation 'flageolet)))
    (set! (ly:music-property m 'tweaks)
       (acons 'font-size -3 (ly:music-property m 'tweaks)))
    m)
 
 dip =
-#(let ((m (make-articulation "upbow")))
+#(let ((m (make-articulation 'upbow)))
    (set! (ly:music-property m 'tweaks)
       (acons 'font-size -3 (ly:music-property m 'tweaks)))
    m)
